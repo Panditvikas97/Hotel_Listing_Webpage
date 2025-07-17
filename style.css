@@ -1,0 +1,213 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+  color: #1f2937;
+  padding: 2rem;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 00 auto;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+/* Form card */
+.form-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.75rem 0;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: 4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.form-card textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.submit-btn, .cancel-btn {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  color: #ffffff;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #4338ca, #6d28d9);
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: linear-gradient(to right, #ef4444, #f87171);
+  color: #ffffff;
+}
+
+.cancel-btn:hover {
+  background: linear-gradient(to right, #dc2626, #e11d48);
+  transform: translateY(-2px);
+}
+
+/* Hotel list */
+.hotel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Hotel card */
+.hotel-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-card h3 {
+  font-size: 1.25rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.hotel-card p {
+  margin: 0.5rem 0;
+  color: #4b5563;
+}
+
+.hotel-card button {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hotel-card button:first-of-type {
+  background: #10b981;
+  color: #ffffff;
+  margin-right: 0.5rem;
+}
+
+.hotel-card button:first-of-type:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.hotel-card button:last-of-type {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.hotel-card button:last-of-type:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .submit-btn, .cancel-btn {
+    width: 100%;
+  }
+
+  .form-card, .hotel-card {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}

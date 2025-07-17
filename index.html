@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Hotel Management</title>
+</head>
+<body>
+  <div class="container">
+    <h1>🏨 Hotel Submission Form</h1>
+    <form id="hotelForm" class="form-card">
+      <input type="hidden" id="hotelId" />
+      <input type="text" id="name" placeholder="Hotel Name" required />
+      <input type="text" id="location" placeholder="Location" required />
+      <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" step="any" required oninput="if(this.value < 1) this.value = 1; if(this.value > 5) this.value = 5;"/>
+      <input type="number" id="price" placeholder="Price per Night" min="0" step="any" required oninput="validity.valid||(value='');" />
+      <textarea id="description" placeholder="Description" rows="4"></textarea>
+      <div class="button-group">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="button" id="cancelEdit" class="cancel-btn" style="display:none;">Cancel</button>
+      </div>
+    </form>
+
+    <h2>📋 Hotel Listings</h2>
+    <div id="hotelList" class="hotel-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
